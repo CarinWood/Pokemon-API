@@ -12,3 +12,11 @@ export async function getPokemonList() {
 
 // get Pokemon -> given a string "pikachu", get the information of pikachu
 
+export async function getPokemon(name: string) {
+    //pokemon/ditto
+
+    const response = await fetch(POKEMON_API + "pokemon/" + name)
+    const data = await response.json()
+
+    return data
+}
